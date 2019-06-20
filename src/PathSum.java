@@ -15,15 +15,11 @@ class PathSum {
         TreeNode(int x) { val = x; }
     }
 
-    //sum inside the binary tree lead by that node
-    public int pathSum(TreeNode root, int sum) {
-        if (root == null) return 0;
-        return pathSumFrom(root, sum) + pathSum(root.left, sum) + pathSum(root.right, sum);
-    }
+    public boolean hasPathSum(TreeNode root, int sum) {
+        if (root == null) return false;
 
-    //pathSum starting at that node
-    private int pathSumFrom(TreeNode node, int sum) {
-        if (node == null) return 0;
-        return (node.val == sum ? 1 : 0) + pathSumFrom(node.left, sum - node.val) + pathSumFrom(node.right, sum - node.val);
+        if (root.left == null && root.right == null) return sum == root.val;
+
+        return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
     }
 }
