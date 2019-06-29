@@ -2,7 +2,7 @@ package tree.rangeSumBST;
 
 import tree.TreeNode;
 
-public class solution {
+public class Solution {
     private int ans = 0;
 
     public int rangeSumBST(TreeNode root, int L, int R) {
