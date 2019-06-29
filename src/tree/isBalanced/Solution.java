@@ -19,15 +19,15 @@ import tree.TreeNode;
 
 class Solution {
     public boolean isBalanced(TreeNode root) {
-        return inOrderTraversal(root) != -1;
+        return postOrderTraversal(root) != -1;
     }
-
-    private int inOrderTraversal(TreeNode node) {
+    
+    private int postOrderTraversal(TreeNode node) {
         if (node == null) return 0;
-
-        int left = inOrderTraversal(node.left);
+        
+        int left = postOrderTraversal(node.left);
         if (left != -1) {
-            int right = inOrderTraversal(node.right);
+            int right = postOrderTraversal(node.right);
             if (right != -1) {
                 return Math.abs(left - right) <= 1 ? Math.max(left, right) + 1 : -1;
             }
