@@ -2,7 +2,7 @@ package tree.rangeSumBST;
 
 import tree.TreeNode;
 
-public class Solution {
+public class Solution1 implements rangeSumBST{
     private int ans = 0;
 
     public int rangeSumBST(TreeNode root, int L, int R) {
@@ -22,4 +22,6 @@ public class Solution {
             preOrderTraversal(node.right, L, R);
         }
     }
+
+
 }
