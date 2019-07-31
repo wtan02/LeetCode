@@ -17,12 +17,13 @@ import tree.TreeNode;
  * }
  */
 
-class Solution {
+class Solution1 implements isBalanced{
+    @Override
     public boolean isBalanced(TreeNode root) {
         return postOrderTraversal(root) != -1;
     }
     
-    //Get hight of a balanced tree, return -1 if the tree is unbalanced
+    //Get height of a balanced tree, return -1 if the tree is unbalanced
     private int postOrderTraversal(TreeNode node) {
         if (node == null) return 0;
         
