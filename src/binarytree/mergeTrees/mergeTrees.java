@@ -1,6 +1,6 @@
-package tree.mergeTrees;
+package binarytree.mergeTrees;
 
-import tree.TreeNode;
+import binarytree.TreeNode;
 
 public interface mergeTrees {
     TreeNode mergeTrees(TreeNode t1, TreeNode t2);

@@ -1,6 +1,6 @@
-package tree.mergeTrees;
+package binarytree.mergeTrees;
 
-import tree.TreeNode;
+import binarytree.TreeNode;
 /*
  * Use shared nodes
  */

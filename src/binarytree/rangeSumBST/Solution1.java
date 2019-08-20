@@ -1,6 +1,6 @@
-package tree.rangeSumBST;
+package binarytree.rangeSumBST;
 
-import tree.TreeNode;
+import binarytree.TreeNode;
 
 public class Solution1 implements rangeSumBST{
     private int ans = 0;

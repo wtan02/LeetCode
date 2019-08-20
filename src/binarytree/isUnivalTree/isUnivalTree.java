@@ -1,6 +1,6 @@
-package tree.isUnivalTree;
+package binarytree.isUnivalTree;
 
-import tree.TreeNode;
+import binarytree.TreeNode;
 
 public interface isUnivalTree {
     boolean isUnivalTree(TreeNode root);

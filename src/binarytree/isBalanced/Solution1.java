@@ -1,6 +1,6 @@
-package tree.isBalanced;
+package binarytree.isBalanced;
 
-import tree.TreeNode;
+import binarytree.TreeNode;
 
 /*
  * @lc app=leetcode id=110 lang=java

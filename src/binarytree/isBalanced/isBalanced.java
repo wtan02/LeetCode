@@ -1,6 +1,6 @@
-package tree.isBalanced;
+package binarytree.isBalanced;
 
-import tree.TreeNode;
+import binarytree.TreeNode;
 
 public interface isBalanced {
     public boolean isBalanced(TreeNode root);

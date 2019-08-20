@@ -1,6 +1,6 @@
-package tree.searchBST;
+package binarytree.searchBST;
 
-import tree.TreeNode;
+import binarytree.TreeNode;
 
 public class Solution2 implements searchBST {
 

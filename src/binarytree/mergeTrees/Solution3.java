@@ -1,21 +1,25 @@
-package tree.mergeTrees;
+package binarytree.mergeTrees;
 
-import tree.TreeNode;
+import binarytree.TreeNode;
 
-import java.util.Deque;
 import java.util.LinkedList;
+import java.util.Queue;
 
-public class Solution2 implements mergeTrees{
+public class Solution3 implements mergeTrees {
+    // Method 3: Iterative BFS using queue
+    // Time: O(n)
+    // Space: O(n)
+
     @Override
     public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
         if (t1 == null) {
             return t2;
         }
         // Use stack to help DFS
-        Deque<TreeNode[]> stack = new LinkedList<>();
-        stack.offerLast(new TreeNode[] {t1, t2});
-        while (!stack.isEmpty()) {
-            TreeNode[] cur = stack.pollLast();
+        Queue<TreeNode[]> queue = new LinkedList<>();
+        queue.offer(new TreeNode[] {t1, t2});
+        while (!queue.isEmpty()) {
+            TreeNode[] cur = queue.poll();
             // no need to merge t2 into t1
             if (cur[1] == null) {
                 continue;
@@ -27,12 +31,12 @@ public class Solution2 implements mergeTrees{
             if (cur[0].left == null) {
                 cur[0].left = cur[1].left;
             } else {
-                stack.offerLast(new TreeNode[] {cur[0].left, cur[1].left});
+                queue.offer(new TreeNode[] {cur[0].left, cur[1].left});
             }
             if (cur[0].right == null) {
                 cur[0].right = cur[1].right;
             } else {
-                stack.offerLast(new TreeNode[] {cur[0].right, cur[1].right});
+                queue.offer(new TreeNode[] {cur[0].right, cur[1].right});
             }
         }
         return t1;

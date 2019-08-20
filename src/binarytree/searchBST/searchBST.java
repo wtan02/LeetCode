@@ -1,6 +1,6 @@
-package tree.searchBST;
+package binarytree.searchBST;
 
-import tree.TreeNode;
+import binarytree.TreeNode;
 
 public interface searchBST {
     TreeNode searchBST(TreeNode root, int val);
