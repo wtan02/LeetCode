@@ -3,14 +3,14 @@ package dfs.solveNQueens;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Solution {
+public class Solution implements SolveNQueens{
     /**
      * Get all distinct N-Queen solutions
      * @param n: The number of queens
      * @return: All distinct solutions
      * For example, A string '...Q' shows a queen on forth position
      */
-    List<List<String>> solveNQueens(int n) {
+    public List<List<String>> solveNQueens(int n) {
         List<List<String>> results = new ArrayList<>();
         if (n <= 0) {
             return results;
