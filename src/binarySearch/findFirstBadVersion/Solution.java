@@ -1,6 +1,6 @@
 package binarySearch.findFirstBadVersion;
 
-public class Solution extends findFirstBadVersion{
+public class Solution implements findFirstBadVersion {
     @Override
     public int findFirstBadVersion(int n) {
         int start = 1, end = n;
